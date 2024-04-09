@@ -91,7 +91,7 @@
                         </div>
                         <div class="col-md-6">
                             <img src="images/range_treatment2.png" class="img-fluid  wow fadeInRight"
-                            data-wow-duration="1s" data-wow-delay=".6s" alt="range_treatment2">
+                                data-wow-duration="1s" data-wow-delay=".6s" alt="range_treatment2">
                         </div>
 
                     </div>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 about_box ">
-                    <div class="ab_box  wow fadeInRight"  data-wow-duration="1s" data-wow-delay=".4s">
+                    <div class="ab_box  wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="about_content">
                             <img src="images/quote.png" class="img-fluid" alt="quote">
                             <p>"Insert a quote about skincare or treatments from karolina here that would
@@ -139,11 +139,12 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact_content">
-                        <h2 class="wow fadeInLeft"  data-wow-duration="1s" data-wow-delay=".2s">Get In Touch</h2>
-                        <p class="mt-2 wow fadeInLeft"  data-wow-duration="1s" data-wow-delay=".4s">To contact us via email, complete the fields in the <br>form, or write us at
+                        <h2 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">Get In Touch</h2>
+                        <p class="mt-2 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">To contact us via
+                            email, complete the fields in the <br>form, or write us at
                             support@lelegna.com.
                         </p>
-                        <form id="contactForm" class="wow fadeInLeft"  data-wow-duration="1s" data-wow-delay=".6s">
+                        <form id="contactForm" class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">
                             <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
                             <input type="email" id="email" name="email" class="form-control" placeholder="Email"
                                 required>
@@ -176,7 +177,7 @@
                         </script>
                     </div>
                 </div>
-                <div class="col-md-6 text-end wow fadeInRight"  data-wow-duration="1s" data-wow-delay=".4s">
+                <div class="col-md-6 text-end wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
                     <img src="images/get_in_touch.png" class="img-fluid" alt="get_in_touch">
                 </div>
             </div>
@@ -190,7 +191,7 @@
             <hr>
             <div class="row p-5">
                 <div class="col-md-4 col-lg-4 col-xl-3">
-                    <div class="footer_content wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="footer_content wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <p>Address</p>
                         <ul>
                             <li>
@@ -208,7 +209,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-3 wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".4s">
+                <div class="col-md-4 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                     <div class="footer_content menu">
                         <p>FAQs</p>
                         <ul>
@@ -230,7 +231,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".6s">
+                <div class="col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                     <div class="footer_content">
                         <p>
                             Subscribe to our newsletter to receive
@@ -243,9 +244,28 @@
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </form>
+                        <script>
+                            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                                event.preventDefault(); // Prevent the default form submission
+                                var formData = new FormData(this);
+
+                                // Send the form data via AJAX
+                                var xhr = new XMLHttpRequest();
+                                xhr.open("POST", "php/newsletter.php", true);
+                                xhr.onload = function () {
+                                    if (xhr.status === 200) {
+                                        document.getElementById("message").innerHTML = xhr.responseText;
+                                        document.getElementById("contactForm").reset(); // Reset the form
+                                    } else {
+                                        document.getElementById("message").textContent = "Error: " + xhr.statusText;
+                                    }
+                                };
+                                xhr.send(formData);
+                            });
+                        </script>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-2 wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".8s">
+                <div class="col-md-4 col-lg-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
                     <div class="social">
                         <p>Find us</p>
                         <ul class="d-flex align-items-center mt-3">

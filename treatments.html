@@ -78,11 +78,13 @@
                 <div class="col-md-12">
                     <div class="skindex_content">
                         <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">The Skindex</h2>
-                        <h4 class="mt-3 mb-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Blurb text Blurb text Blurb text Blurb text Blurb text Blurb text Blurb
+                        <h4 class="mt-3 mb-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Blurb text Blurb
+                            text Blurb text Blurb text Blurb text Blurb text Blurb
                             text Blurb text Blurb
                             text Blurb text Blurb text Blurb text Blurb text Blurb text Blurb text Blurb text Blurb text
                         </h4>
-                        <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">SEARCH YOUR CONCERN.........</h4>
+                        <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">SEARCH YOUR
+                            CONCERN.........</h4>
                     </div>
                 </div>
                 <div class="col-md-12 mt-5">
@@ -168,8 +170,10 @@
             <div class="row">
                 <div class="col-md-6 cp60">
                     <div class="contact_content">
-                        <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" data>Questions about a treatment?</h2>
-                        <p class="mt-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">To contact us via email, complete the fields in the <br> form, or write us at
+                        <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" data>Questions about a
+                            treatment?</h2>
+                        <p class="mt-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">To contact us via
+                            email, complete the fields in the <br> form, or write us at
                             support@lelegna.com.
                         </p>
                         <form id="contactForm" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
@@ -219,7 +223,7 @@
             <hr>
             <div class="row p-5">
                 <div class="col-md-4 col-lg-4 col-xl-3">
-                    <div class="footer_content wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="footer_content wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <p>Address</p>
                         <ul>
                             <li>
@@ -237,7 +241,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-3 wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".4s">
+                <div class="col-md-4 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                     <div class="footer_content menu">
                         <p>FAQs</p>
                         <ul>
@@ -259,7 +263,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".6s">
+                <div class="col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                     <div class="footer_content">
                         <p>
                             Subscribe to our newsletter to receive
@@ -272,9 +276,28 @@
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </form>
+                        <script>
+                            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                                event.preventDefault(); // Prevent the default form submission
+                                var formData = new FormData(this);
+
+                                // Send the form data via AJAX
+                                var xhr = new XMLHttpRequest();
+                                xhr.open("POST", "php/newsletter.php", true);
+                                xhr.onload = function () {
+                                    if (xhr.status === 200) {
+                                        document.getElementById("message").innerHTML = xhr.responseText;
+                                        document.getElementById("contactForm").reset(); // Reset the form
+                                    } else {
+                                        document.getElementById("message").textContent = "Error: " + xhr.statusText;
+                                    }
+                                };
+                                xhr.send(formData);
+                            });
+                        </script>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-2 wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".8s">
+                <div class="col-md-4 col-lg-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
                     <div class="social">
                         <p>Find us</p>
                         <ul class="d-flex align-items-center mt-3">

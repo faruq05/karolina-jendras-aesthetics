@@ -257,6 +257,25 @@
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </form>
+                        <script>
+                            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                                event.preventDefault(); // Prevent the default form submission
+                                var formData = new FormData(this);
+
+                                // Send the form data via AJAX
+                                var xhr = new XMLHttpRequest();
+                                xhr.open("POST", "php/newsletter.php", true);
+                                xhr.onload = function () {
+                                    if (xhr.status === 200) {
+                                        document.getElementById("message").innerHTML = xhr.responseText;
+                                        document.getElementById("contactForm").reset(); // Reset the form
+                                    } else {
+                                        document.getElementById("message").textContent = "Error: " + xhr.statusText;
+                                    }
+                                };
+                                xhr.send(formData);
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
