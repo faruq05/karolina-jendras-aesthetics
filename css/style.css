@@ -111,30 +111,50 @@ hr {
     box-shadow: none;
 }
 
-.overflow{
+.overflow {
     overflow: hidden;
 }
 
-/* header */
+.navbar-toggler,
+.navbar-toggler:focus {
+    box-shadow: none
+}
+
+.contact_content form,
+.kar h4 {
+    margin-top: 50px
+}
+
+.ct_header li a,
+.menu ul li a p,
+.navbar-toggler,
+.trt_head li a {
+    color: var(--cs-text)
+}
+
+.footer_content ul li,
+.social ul li a i {
+    transition: .2s ease-in-out, .2s ease-in-out
+}
+
 .header {
     padding: 20px 15px;
     position: fixed;
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color .3s
 }
 
 .header.scrolled {
     background-color: #d6d5c6;
-    padding: 15px;
+    padding: 15px
 }
 
 .responsive_logobox {
-    display: none;
+    display: none
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 0;
-    padding: 0px 50px;
+    padding: 0 50px
 }
 
 .nav-item a {
@@ -142,159 +162,120 @@ hr {
     font-weight: 500;
     font-family: "Anek Tamil", sans-serif;
     line-height: 28.16px;
-    color: var(--cs-white);
+    color: var(--cs-white)
 }
 
+.contactpg_link a:hover,
 .nav-item a:hover {
-    color: var(--cs-accent);
-}
-
-.navbar-nav .nav-item.active .nav-link {
-    /* font-weight: 500; */
+    color: var(--cs-accent)
 }
 
 .navbar-brand img {
     max-width: 70%;
-    transition: max-width 0.3s ease;
+    transition: max-width .3s
 }
 
 .header.scrolled .navbar-brand img {
-    max-width: 50%;
-}
-
-
-.navbar-toggler:focus {
-    box-shadow: none;
+    max-width: 50%
 }
 
 .navbar-toggler {
     border: none;
     padding: 0;
-    font-size: 26px;
-    color: var(--cs-text);
-    box-shadow: none;
+    font-size: 26px
 }
 
-/* header ends */
-
-/* banner starts */
 .hero {
-    background: url(../images/banner.png) center center / cover no-repeat;
+    background: url(../images/banner.png) center center/cover no-repeat
 }
 
 .hero .row {
-    min-height: 88vh;
+    min-height: 88vh
 }
 
-/* banner ends */
-
-/* range of treatments starts */
-
-/* range of treatments ends */
-
-/* about starts */
 .about_box {
-    background-color: var(--cs-greenbg);
+    background-color: var(--cs-greenbg)
 }
 
 .ab_box {
-    padding: 60px;
+    padding: 60px
 }
 
 .about_content {
-    padding: 80px 0px;
-    width: 83%;
+    padding: 80px 0;
+    width: 83%
 }
 
 .about_content p {
     padding-left: 50px;
-    padding-top: 20px;
+    padding-top: 20px
 }
 
 .kar h4 {
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin-top: 50px;
+    justify-content: end
 }
 
 .kar h4 hr {
     width: 80px;
-    margin-right: 20px;
+    margin-right: 20px
 }
 
-/* about ends */
-
-/* get in touch starts */
-.contact {
-    background-color: var(--cs-primary);
-}
-
-.contact_content form {
-    margin-top: 50px;
+.contact,
+.cta,
+.footer {
+    background-color: var(--cs-primary)
 }
 
 .contact_content form input,
 .contact_content form textarea {
     background-color: transparent;
     border: 0;
-    border-bottom: 1px solid #8C8C8C;
-    padding: 10px 10px 10px 0px;
+    border-bottom: 1px solid #8c8c8c;
+    padding: 10px 10px 10px 0;
     border-radius: 0;
-    margin-bottom: 20px;
+    margin-bottom: 20px
+}
+
+.newsletter input,
+form button {
+    background-color: transparent;
+    border: 0
 }
 
 .contact_content form input::placeholder,
 .contact_content form textarea::placeholder {
     font-size: 20px;
     font-weight: 300;
-    color: var(--cs-text);
+    color: var(--cs-text)
 }
 
 form button {
-    border: 0;
     font-family: "Courier Prime", monospace;
     font-size: 24px;
     font-weight: 400;
-    color: var(--cs-accent);
-    background-color: transparent;
-}
-
-/* get in touch ends */
-
-/* footer starts */
-.footer {
-    background-color: var(--cs-primary);
-}
-
-.footer_content ul li {
-    transition: .2s all ease-in-out, .2s all ease-in-out;
-}
-
-.menu ul li a p {
-    color: var(--cs-text);
+    color: var(--cs-accent)
 }
 
 .footer_content ul li:hover {
-    padding-left: 5px;
+    padding-left: 5px
 }
 
 .newsletter input {
-    background-color: transparent;
-    border: 0;
-    border-bottom: 1px solid #8C8C8C;
-    padding: 10px 10px 10px 0px;
+    border-bottom: 1px solid #8c8c8c;
+    padding: 10px 10px 10px 0;
     border-radius: 0;
     margin-bottom: 20px;
     width: 80%;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .newsletter input::placeholder {
     font-family: "Courier Prime", monospace;
     font-size: 20px;
     font-weight: 400;
-    color: var(--cs-accent);
+    color: var(--cs-accent)
 }
 
 .social ul li a i {
@@ -306,143 +287,93 @@ form button {
     justify-content: center;
     margin-right: 10px;
     border-radius: 5px;
-    color: var(--cs-white);
-    transition: .2s all ease-in-out, .2s all ease-in-out;
+    color: var(--cs-white)
 }
 
 .social ul li a i:hover {
     background-color: var(--cs-accent);
-    margin-top: -8px;
-}
-
-/* footer ends */
-
-/* ================================================ */
-
-/* treatments page starts */
-.trt_head li a {
-    color: var(--cs-text);
+    margin-top: -8px
 }
 
 .treatments {
-    background: url(../images/treatment-banner.png) center center / cover no-repeat;
-    ;
+    background: url(../images/treatment-banner.png) center center/cover no-repeat
 }
 
+.aboutpg .row,
 .treatments .row {
-    min-height: 60vh;
+    min-height: 60vh
 }
 
 .skindex_content {
     width: 60%;
-    margin: auto;
+    margin: auto
 }
 
 .items_title {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: end
 }
 
 .wd {
     width: 40%;
-    text-align: left;
+    text-align: left
 }
 
+.about-karolina,
+.footer_trt,
 .trt_contact {
-    background-color: var(--cs-darkgrn);
+    background-color: var(--cs-darkgrn)
 }
 
-.footer_trt {
-    background-color: var(--cs-darkgrn);
-}
-
-/* treatments page ends */
-
-/* ================================================ */
-
-/* about page starts */
 .aboutpg {
-    background: url(../images/about-banner.png) center center / cover no-repeat;
-    ;
-}
-
-.aboutpg .row {
-    min-height: 60vh;
+    background: url(../images/about-banner.png) center center/cover no-repeat
 }
 
 .meet {
-    background: url(../images/about-abstract.png) bottom right no-repeat;
-    background-size: 20%;
-    background-color: var(--cs-primary);
+    background: url(../images/about-abstract.png) bottom right/20% no-repeat;
+    background-color: var(--cs-primary)
 }
 
 .meet-karolina p {
     padding-top: 100px;
-    text-align: justify;
-}
-
-.about-karolina {
-    background-color: var(--cs-darkgrn);
+    text-align: justify
 }
 
 .kj {
-    padding: 100px;
+    padding: 100px
 }
 
-.cta {
-    background-color: var(--cs-primary);
-}
-
-.about_contact {
-    background-color: var(--cs-white);
-}
-
+.about_contact,
+.contact_header,
 .footer_about {
-    background-color: var(--cs-white);
-}
-
-/* about page ends */
-
-/* ================================================ */
-
-/* Contact starts */
-.contact_header {
-    background-color: var(--cs-white);
-}
-
-.ct_header li a {
-    color: var(--cs-text);
+    background-color: var(--cs-white)
 }
 
 .contctpg {
-    padding: 180px 60px 80px 60px;
-    background-color: var(--cs-darkgrn);
+    padding: 180px 60px 80px;
+    background-color: var(--cs-darkgrn)
 }
 
 .contact_title {
-    padding-bottom: 80px;
-}
-
-.contactpg_link a:hover {
-    color: var(--cs-accent);
+    padding-bottom: 80px
 }
 
 .contactpg_link {
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .inpbox {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .inpitem {
-    width: 48%;
+    width: 48%
 }
 
 .contactpg_form form input::placeholder,
 .contactpg_form form textarea::placeholder {
     color: var(--cs-accent);
-    font-family: "Courier Prime", monospace;
+    font-family: "Courier Prime", monospace
 }
