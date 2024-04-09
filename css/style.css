@@ -114,11 +114,17 @@ hr {
 /* header */
 .header {
     padding: 20px 15px;
-    position: absolute;
+    position: fixed;
     width: 100%;
+    transition: background-color 0.3s ease;
 }
 
-.responsive_logobox{
+.header.scrolled {
+    background-color: #d6d5c6;
+    padding: 15px;
+}
+
+.responsive_logobox {
     display: none;
 }
 
@@ -145,6 +151,11 @@ hr {
 
 .navbar-brand img {
     max-width: 70%;
+    transition: max-width 0.3s ease;
+}
+
+.header.scrolled .navbar-brand img {
+    max-width: 50%;
 }
 
 
@@ -409,11 +420,11 @@ form button {
     padding-bottom: 80px;
 }
 
-.contactpg_link a:hover{
+.contactpg_link a:hover {
     color: var(--cs-accent);
 }
 
-.contactpg_link{
+.contactpg_link {
     margin-bottom: 30px;
 }
 
