@@ -157,6 +157,11 @@ hr {
     padding: 0 50px
 }
 
+.cur{
+    color: var(--cs-accent)!important;
+}
+
+
 .nav-item a {
     font-size: 20px;
     font-weight: 500;
