@@ -95,7 +95,7 @@ hr {
 }
 
 .gen-btn:hover {
-    color: var(--cs-darkgrn);
+    color: var(--cs-text);
     padding-left: 10px;
 }
 
@@ -109,6 +109,10 @@ hr {
     border-color: #8C8C8C;
     outline: 0;
     box-shadow: none;
+}
+
+.overflow{
+    overflow: hidden;
 }
 
 /* header */
@@ -268,7 +272,7 @@ form button {
 }
 
 .menu ul li a p {
-    color: var(--cs-accent);
+    color: var(--cs-text);
 }
 
 .footer_content ul li:hover {

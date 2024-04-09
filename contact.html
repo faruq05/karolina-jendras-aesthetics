@@ -23,7 +23,7 @@
 
 <body>
     <!-- header starts========================================= -->
-    <div class="header contact_header" id="header">
+    <div class="header contact_header wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s" id="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand responsive_logobox" href="index.html"><img src="images/logo_black.png"
@@ -65,14 +65,15 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center contact_title">Let’s talk or book now</h2>
+                    <h2 class="text-center contact_title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">Let’s
+                        talk or book now</h2>
                 </div>
                 <div class="col-md-12 col-lg-4 order-2 order-md-2 order-lg-1  cont-info">
-                    <div class="contactpg_link">
+                    <div class="contactpg_link wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                         <h5>Email</h5>
                         <a href="mailto:company@domain.com">company@domain.com</a>
                     </div>
-                    <div class="contactpg_link">
+                    <div class="contactpg_link wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">
                         <h5>Address</h5>
                         <ul>
                             <li>
@@ -89,21 +90,22 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="contactpg_link">
+                    <div class="contactpg_link wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".8s">
                         <h5>Phone</h5>
                         <a href="tel:07000000000">07000000000</a>
                     </div>
-                    <div class="contactpg_link">
+                    <div class="contactpg_link wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                         <h5>WhatsApp</h5>
                         <a href="tel:07000000000">07000000000</a>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-8 order-1 order-md-1 order-lg-2">
                     <div class="contact_content contactpg_form">
-                        <p class="mb-5">To contact us via email, complete the fields in the <br>form, or write us at
+                        <p class="mb-5 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">To contact us via
+                            email, complete the fields in the <br>form, or write us at
                             support@lelegna.com.
                         </p>
-                        <form id="queryForm">
+                        <form id="queryForm" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                             <div class="inpbox">
                                 <div class="inpitem">
                                     <label for="name">Name and Surname</label>
@@ -160,7 +162,7 @@
                 </div>
             </div>
             <!-- map -->
-            <div class="row mt-5">
+            <div class="row mt-5 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay=".2s">
                 <div class="col-md-12">
                     <!-- <iframe src="" frameborder="0"></iframe> -->
                     <img src="images/map.png" class="img-fluid w-100" alt="map">
@@ -176,7 +178,7 @@
             <hr>
             <div class="row p-5">
                 <div class="col-md-4 col-lg-4 col-xl-3">
-                    <div class="footer_content">
+                    <div class="footer_content wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <p>Address</p>
                         <ul>
                             <li>
@@ -194,29 +196,29 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-3">
+                <div class="col-md-4 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                     <div class="footer_content menu">
                         <p>FAQs</p>
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="about.html">
                                     <p>About</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="connect.html">
+                                <a href="contact.html">
                                     <p>Contact us</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="skindex.html">
+                                <a href="treatments.html">
                                     <p>Treatments </p>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4">
+                <div class="col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                     <div class="footer_content">
                         <p>
                             Subscribe to our newsletter to receive
@@ -231,7 +233,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-2">
+                <div class="col-md-4 col-lg-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
                     <div class="social">
                         <p>Find us</p>
                         <ul class="d-flex align-items-center mt-3">
@@ -265,7 +267,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
