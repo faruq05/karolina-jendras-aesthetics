@@ -81,8 +81,8 @@
     }
 
     .header {
-        position: relative;
         padding: 0px 15px;
+        background-color: var(--cs-white);
     }
 
     .logo-box {
@@ -150,6 +150,11 @@
     .about_contact .text-end {
         text-align: center !important;
     }
+
+    /* contact pg */
+    .contctpg {
+        padding-top: 100px;
+    }
 }
 
 @media(max-width:767px) {
@@ -169,6 +174,11 @@
 
     .skindex_items {
         margin-top: 30px;
+    }
+
+    /* contact pg */
+    .contctpg {
+        padding-top: 100px;
     }
 
 }
@@ -195,6 +205,10 @@
 
     .mt-5 {
         margin-top: 1rem !important;
+    }
+
+    .rimg {
+        width: 49%;
     }
 
     .range_image img {
@@ -229,6 +243,10 @@
     }
 
     /* contact pg */
+    .contctpg {
+        padding-top: 100px;
+    }
+
     .contact_title {
         padding-bottom: 40px;
     }
@@ -245,7 +263,7 @@
         width: auto;
     }
 
-    .cont-info{
+    .cont-info {
         margin-top: 50px;
     }
 }
